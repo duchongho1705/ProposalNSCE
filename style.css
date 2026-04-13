@@ -1,0 +1,19 @@
+.pattern-grid-lg {
+    background-image: linear-gradient(to right, #ffffff20 1px, transparent 1px),
+                      linear-gradient(to bottom, #ffffff20 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+.animate-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
