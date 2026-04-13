@@ -1,0 +1,25 @@
+{
+  "name": "proposalnsce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duchongho1705/ProposalNSCE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/duchongho1705/ProposalNSCE/issues"
+  },
+  "homepage": "https://github.com/duchongho1705/ProposalNSCE#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
