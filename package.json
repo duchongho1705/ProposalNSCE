@@ -21,5 +21,8 @@
   "homepage": "https://github.com/duchongho1705/ProposalNSCE#readme",
   "devDependencies": {
     "gh-pages": "^6.3.0"
+  },
+  "dependencies": {
+    "firebase": "^12.12.0"
   }
 }
