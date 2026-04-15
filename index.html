@@ -97,6 +97,11 @@
                         } else {
                             callback([]);
                         }
+                    }, (error) => {
+                        console.error('❌ Tải dữ liệu Firebase lỗi:', error);
+                        if (error.code && error.code.includes('PERMISSION_DENIED')) {
+                            alert('⚠️ LỖI BẢO MẬT FIREBASE ⚠️\n\nDatabase đang bị khoá. Góp ý sẽ không đồng bộ được.\n\nHãy vào Firebase Console -> Realtime Database -> Tab "Rules".\nSửa đổi thành:\n{\n  "rules": {\n    ".read": true,\n    ".write": true\n  }\n}\nTham khảo chi tiết tại file SETUP_FIREBASE.md');
+                        }
                     });
                     return () => dbRef.off('value', listener);
                 },
@@ -107,6 +112,11 @@
                         role,
                         timestamp: Date.now(),
                         resolved: false
+                    }).catch(err => {
+                        console.error("Lỗi thêm góp ý:", err);
+                        if(err.message.includes('permission_denied')) {
+                            alert('Không thể gửi góp ý vì lỗi quyền truy cập Firebase. Vào thẻ Rules trong Firebase Database để sửa .write thành true.');
+                        }
                     });
                 },
                 toggleResolved(feedbackId, currentResolved) {
