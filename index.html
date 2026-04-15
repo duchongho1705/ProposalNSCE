@@ -46,11 +46,11 @@
     };
 
     // Khởi tạo Firebase
-    let firebaseReady = false;
+    window.firebaseReady = false;
     try {
         if (firebaseConfig.apiKey !== "YOUR_API_KEY") {
             firebase.initializeApp(firebaseConfig);
-            firebaseReady = true;
+            window.firebaseReady = true;
             console.log('✅ Firebase đã kết nối thành công!');
         } else {
             console.warn('⚠️ Firebase chưa được cấu hình. Đang dùng localStorage (chỉ lưu trên máy này). Xem SETUP_FIREBASE.md để thiết lập đồng bộ đa thiết bị.');
